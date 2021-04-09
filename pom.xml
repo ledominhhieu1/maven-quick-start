@@ -7,15 +7,23 @@
   <groupId>clinic.programmming</groupId>
   <artifactId>maven-quick-start</artifactId>
   <version>1.0</version>
+  <properties>
+	<maven.compiler.source>16</maven.compiler.source>
+	<maven.compiler.target>16</maven.compiler.target>
+  </properties>
   <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
 				<configuration>
-                    <release>16</release>
-                </configuration>
+					<archive>
+						<manifest>
+							<mainClass>clinic.programming.training.Application</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
             </plugin>
         </plugins>
     </build>
